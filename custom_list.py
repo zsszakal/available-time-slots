@@ -3,5 +3,4 @@ class CustomList(list):
         try:
             self.remove(v)
         except ValueError:
-            print(f"{v} already deleted!")
-
+           pass
