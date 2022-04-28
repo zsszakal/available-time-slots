@@ -1,22 +1,10 @@
 def timerange_to_minutes(t_str):
-    """
-    Return amount of minutes for the time ranges in HH:MM format
-    :param t_str:
-    :return:
-    """
-
     hour = int(t_str.split(":")[0])
     minutes = int(t_str.split(":")[1])
     hour_to_minutes = hour * 60
     return hour_to_minutes + minutes
 
 def minutes_to_timerange_str(m):
-    """
-    Return a timerange string in format of HH: MM format for the given integer
-    :param m:
-    :return:
-    m = 90 -> 01:30
-    """
     hour = m // 60
     hour_str = f"{hour:02d}"
     minutes = m % 60
@@ -24,9 +12,9 @@ def minutes_to_timerange_str(m):
     return f"{hour_str}:{minutes_str}"
 
 def prettify_available_minutes(l: list):
-    grouped_list = [] # Nested list
+    grouped_list = []
     list_resettable = []
-    # Group the list - aggregate list: [[0, 1, 2], [60, 61, 62]]
+
     for element in l:
         if list_resettable == []:
             list_resettable.append(element)

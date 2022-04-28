@@ -3,4 +3,4 @@ class CustomList(list):
         try:
             self.remove(v)
         except ValueError:
-           pass
+            pass
